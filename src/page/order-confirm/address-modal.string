@@ -1,0 +1,46 @@
+<div class="modal">
+    <div class="modal-container">
+        <div class="modal-header">
+            {{#isUpdate}}
+            <h1 class="modal-title">更新地址</h1>
+            {{/isUpdate}}
+
+            {{^isUpdate}}
+            <h1 class="modal-title">使用新地址</h1>
+            {{/isUpdate}}
+
+            <i class="fa fa-close close"></i>
+        </div>
+        <div class="modal-body">
+            <div class="form">
+                <div class="form-line">
+                    <label for="form-item" class="label">&nbsp;&nbsp;&nbsp;<span class="star">*</span>收件人姓名：</label>
+                    <input type="text" class="form-item" id="receiver-name" placeholder="请输入收件人姓名" value="{{data.receiverName}}">
+                </div>
+                <div class="form-line">
+                    <label for="receiver-city" class="label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="star">*</span>所在城市：</label>
+                    <select id="receiver-city">
+                        
+                    </select>
+                    <select id="receiver-subcity">
+                        
+                    </select>
+                </div>
+                <div class="form-line">
+                    <label for="" class="label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="star">*</span>详细地址:&nbsp;&nbsp;</label>
+                    <input type="text" class="form-item" id="receiver-address" placeholder="请精确到门牌号" value="{{data.receiverAddress}}">
+                </div>
+                <div class="form-line">
+                    <label for="" class="label"><span class="star">*</span>收件人手机号：</label>
+                    <input type="text" class="form-item" id="receiver-phone" placeholder="请输入11位有效手机号" value="{{data.receiverPhone}}">
+                </div>
+                <div class="form-line">
+                    <label for="" class="label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮政编码：</label>
+                    <input type="text" class="form-item" id="receiver-zip" placeholder="如：100000" value="{{data.receiverZip}}">
+                </div>
+            </div>
+            <input type="hidden" class="Id" value="{{data.id}}">
+            <div class="btn save-btn">保存地址</div>
+        </div>
+    </div>
+</div>

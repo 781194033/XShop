@@ -1,0 +1,174 @@
+/*
+* @Author: cewei
+* @Date:   2018-02-17 13:02:43
+* @Last Modified by:   cewei
+* @Last Modified time: 2018-02-26 20:24:46
+*/
+.address-con{
+    overflow: hidden;
+    color:#444;
+}
+.panel-title{
+    color:#444;
+}
+/*收货地址框*/
+.address-item,
+.address-new{
+    float: left;
+    border: 2px dashed #999;
+    margin:30px 20px;
+    width: 200px;
+    cursor:pointer;
+    height: 90px;
+}
+.address-item:hover,
+.address-new:hover{
+    background: #eee
+}
+.address-item:hover .address-opera .link{
+    visibility:visible;
+}
+.address-item .address-title{
+    height: 25px;
+    line-height: 25px;
+    color: #666;
+    font-size: 14px;
+    text-align:center;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.address-item .address-detail{
+    text-align:center;
+    padding: 3px 0;
+    height:36px;
+    overflow:hidden;
+}
+
+.address-item .address-opera{
+    height: 20px;
+    line-height: 20px;
+}
+.address-item .address-opera .link{
+    float: right;
+    margin: 0 5px;
+    visibility:hidden;
+}
+
+.address-new{
+    height: 90px;
+}
+
+.address-new{
+    text-align:center;
+    font-size:25px;
+    color:#999;
+}
+.address-new .new-con{
+    font-size:16px;
+}
+.address-new .fa-plus{
+    font-size: 50px;
+}
+.active{
+    border: 2px dashed #FF4200;
+}
+
+/*商品清单部分*/
+.product-table{
+    width: 100%;
+    padding: 20px 0;
+}
+.product-table tr td{
+    border-bottom:1px solid #ddd;
+}
+.product-table .cell-img{
+    width: 10%;
+    text-align:center;
+}
+.product-table .cell-img .p-img{
+    width: 80px;
+    height: 80px;
+    padding: 15px 5px;
+}
+.product-table .cell-count{
+    width: 20%;
+    text-align:center;
+}
+.product-table .cell-desc{
+    width: 30%;
+    text-align:left;
+}
+.product-table .cell-total{
+    width: 20%;
+    text-align:center;
+}
+.product-table .cell-price{
+    width: 20%;
+    text-align:center;
+}
+.order-item{
+    text-align: right;
+    background: #eee;
+}
+
+.order-item .order-title{
+    font-size: 16px;
+    margin-right:20px;
+}
+
+.order-item .order-total{
+    font-size: 16px;
+    margin-right:20px;
+    color:#FF4200;
+}
+
+/*modal部分*/
+.modal{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background: #eee;
+    background: rgba(0,0,0,.4);
+    z-index: 1000;
+}
+
+.modal .modal-container{
+    background: #fff;
+    margin: 60px auto;
+    width: 700px;
+}
+
+.modal .modal-header{
+    border-bottom:1px solid #666; 
+    position:relative;
+}
+
+.modal .modal-header .modal-title{
+    font-size: 18px;
+    margin: 5px;
+    color:#444;
+}
+.modal .modal-header .fa-close{
+    position: absolute;
+    right: 10px;
+    padding: 3px;
+    top:0;
+    font-size:15px;
+    cursor: pointer;
+}
+.modal .modal-body{
+    margin:20px;
+}
+.modal .modal-body .form-line{
+    padding: 10px;
+}
+.modal .modal-body .star{
+    color: #FF4200;
+}
+.modal .save-btn{
+    margin-left:300px;
+    margin-bottom:20px; 
+}

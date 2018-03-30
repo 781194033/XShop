@@ -1,0 +1,20 @@
+/*
+* @Author: cewei
+* @Date:   2018-03-02 14:27:43
+* @Last Modified by:   cewei
+* @Last Modified time: 2018-03-02 15:45:21
+*/
+.page-wrap .order-tips{
+	font-size: 16px;
+	text-align: center;
+	padding:10px;
+}
+.page-wrap .app-tips{
+	font-size: 16px;
+	text-align: center;
+	color: #FF4200;
+	padding-bottom:10px;
+}
+.page-wrap .qr-con .qr-code{
+	margin:0 auto;
+}

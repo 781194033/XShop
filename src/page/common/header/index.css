@@ -1,0 +1,50 @@
+/*
+* @Author: cewei
+* @Date:   2018-02-07 12:40:01
+* @Last Modified by:   cewei
+* @Last Modified time: 2018-02-09 20:44:11
+*/
+.logo{
+	position: absolute;
+	font-size: 25px;
+	font-weight: bold;
+	color: #FF4200;
+	top:30px;
+	left: 175px;
+	text-decoration:none;
+}
+.search-box{
+	padding: 32px 0 30px 300px;
+}
+.search-box .search{
+	padding-left: 10px;
+	width: 450px;
+	height: 30px;
+	border: 2px solid #FF4200;
+	border-radius:16px 0 0 16px;
+	outline: none;
+}
+.search-box .product-btn{
+	position: absolute;
+	height: 34px;
+	border-radius:0 16px 16px 0;
+}
+
+.crumb{
+	background: #eee;
+	padding:10px 0;
+	font-size:14px;
+	border-top:2px solid #FF4200;
+	margin-bottom: 20px;
+}
+.panel{
+	background: #fff;
+	margin-top:10px;
+}
+.panel .panel-title{
+	font-size:14px;
+	font-weight:bold;
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+}
+

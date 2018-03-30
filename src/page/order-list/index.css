@@ -1,0 +1,59 @@
+/*
+* @Author: cewei
+* @Date:   2018-02-28 14:41:03
+* @Last Modified by:   cewei
+* @Last Modified time: 2018-03-02 14:28:50
+*/
+.panel{
+	width: 950px;
+	float:right;
+}
+.panel-title{
+    background: #fff;
+    color:#333;
+}
+.panel-body .table{
+	width: 100%;
+	margin:10px 0;
+}
+.panel-body .orderDetail{
+	background: #eee;
+	padding: 5px 0;
+}
+.panel-body .tableTop{
+	background: #eee;
+}
+
+.panel-body .orderDetail .detailItem{
+	margin:0 10px; 
+}
+.panel-body .orderDetail .orderPayment{
+	color: #FF4200;
+	font-weight: bold;
+}
+.panel-body .orderDetail .orderPort{
+	float: right;
+}
+.panel-body .table td{
+	border-bottom: 1px solid #eee;
+}
+.panel-body .table .productName{
+	width: 40%;
+	text-align:left;
+}
+.panel-body .table .productCount{
+	width: 20%;
+	text-align:center;
+}
+.panel-body .table .productImg{
+	padding: 10px 30px;
+	width: 10%;
+}
+.panel-body .table .productImg img{
+	width: 80px;
+	height: 80px;
+}
+.panel-body .table .productPrice{
+	width: 20%;
+	text-align:center;
+}

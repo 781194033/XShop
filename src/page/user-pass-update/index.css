@@ -1,0 +1,33 @@
+/*
+* @Author: cewei
+* @Date:   2018-02-09 11:58:43
+* @Last Modified by:   cewei
+* @Last Modified time: 2018-02-09 14:37:58
+*/
+.form-line{
+    margin-bottom: 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.form-line .label{
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+}
+.form-line .input{
+    height: 25px;
+    line-height: 25px;
+    width: 200px;
+    font-size: 14px;
+}
+.panel{
+    background: #fff;
+    margin-top:10px;
+}
+.panel .panel-title{
+    font-size:14px;
+    font-weight:bold;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}

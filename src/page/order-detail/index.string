@@ -1,0 +1,61 @@
+<div class="panel-title">订单详情</div>
+<div class="panel-body">
+    <div class="order-line">订单号：<span class="orderNo">{{orderNo}}</span></div>
+    <div class="order-line">创建时间：<span class="orderCreateTime">{{createTime}}</span></div>
+    <div class="order-line">收件人：
+        {{#shippingVo}}
+        <span class="orderReceiver"> {{receiverName}}</span>
+        <span class="orderReceiver"> {{receiverPhone}}</span>
+        <span class="orderReceiver"> {{receiverProvince}}</span>
+        <span class="orderReceiver"> {{receiverCity}}</span>
+        <span class="orderReceiver"> {{receiverDistrict}}</span>
+        <span class="orderReceiver"> {{receiverAddress}}</span>
+        <span class="orderReceiver"> {{receiverZip}}</span>
+        {{/shippingVo}}
+    </div>
+    <div class="order-line">支付方式：<span class="orderPaymentWay">{{paymentTypeDesc}}</span></div>
+    <div class="order-line">订单状态:  <span class="orderStatus">{{statusDesc}}</span></div>
+    {{#needPay}}
+    <div class="btn payBtn">立即支付</div>
+    {{/needPay}}
+    {{#isCancelable}}
+    <div class="btn cancelBtn">取消订单</div>
+    {{/isCancelable}}
+</div>
+<div class="panel-footer">
+    <div class="panel-title">商品清单</div>
+    <div class="footer-body order-con"> 
+        <table class="tableTop table">
+            <tr>
+                <th class="productImg">
+                    &nbsp;
+                </th>
+                <th class="productName">
+                    商品信息
+                </th>
+                <th class="productCount">
+                    数量
+                </th>
+                <th class="productPrice">小计</th>
+            </tr>
+        </table>
+        {{#orderItemVoList}}     
+        <table class="table">
+                <tr>
+                    <td class="productImg">
+                        <a href="./detail.html?productId={{productId}}"><img src="{{imageHost}}{{productImage}}" alt="{{productName}}"/></a>
+                    </td>
+                    <td class="productName">
+                        <a href="./detail.html?productId={{productId}}" class="link">
+                            <span>{{productName}}</span>
+                        <a href="./detail.html?productId={{productId}}">
+                    </td>
+                    <td class="productCount">
+                        {{quantity}}
+                    </td>
+                    <td class="productPrice">￥{{totalPrice}}</td>
+                </tr>
+        </table>
+        {{/orderItemVoList}}   
+    </div>
+</div>

@@ -1,0 +1,45 @@
+
+<div class="panel-title">我的订单</div>
+{{#list}}
+<div class="panel-body order-con">      
+<table class="tableTop table">
+    <tr>
+        <th class="productImg">
+            &nbsp;
+        </th>
+        <th class="productName">
+            商品信息
+        </th>
+        <th class="productCount">
+            数量
+        </th>
+        <th class="productPrice">小计</th>
+    </tr>
+</table>
+
+<div class="orderDetail"> 
+    <span class="detailItem orderNo">订单号：<a href="./order-detail.html?orderNumber={{orderNo}}" class="link">{{orderNo}}</a><span>
+    <span class="detailItem orderCreateTime">{{createTime}}</span>
+    <span class="detailItem orderReceiver">收件人: {{receiverName}}</span>
+    <span class="detailItem orderStatus">订单状态: {{statusDesc}}</span>
+    <span class="detailItem">订单总价:<span class="orderPayment"> ￥{{payment}}</span></span>
+    <span class="detailItem orderPort"><a href="./order-detail.html?orderNumber={{orderNo}}" class="link">查看详情>></a></span>
+</div>
+{{#orderItemVoList}}
+<table class="table">
+    <tr>
+        <td class="productImg">
+            <a href="./detail.html?productId={{productId}}"><img src="{{imageHost}}{{productImage}}" alt="{{productName}}"/></a>
+        </td>
+        <td class="productName">
+            <a href="./detail.html?productId={{productId}}" class="link"><span>{{productName}}</span><a href="./detail.html?productId={{productId}}">
+        </td>
+        <td class="productCount">
+            {{quantity}}
+        </td>
+        <td class="productPrice">￥{{totalPrice}}</td>
+    </tr>
+</table>
+{{/orderItemVoList}}
+</div>
+{{/list}}

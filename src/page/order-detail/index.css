@@ -1,0 +1,77 @@
+/*
+* @Author: cewei
+* @Date:   2018-03-01 14:50:08
+* @Last Modified by:   cewei
+* @Last Modified time: 2018-03-01 16:24:18
+*/
+.panel{
+	width: 950px;
+	float:right;
+}
+.panel .panel-title{
+	color:#333;
+	border-bottom:1px solid #eee;
+}
+
+.panel .panel-body{
+	background: #fafafa;
+	font-size:14px;
+	padding: 10px;
+}
+.panel .panel-body .order-line{
+	padding:5px;
+	text-align: left;
+}
+.panel .panel-body .order-line:nth-child(4){
+	border-bottom:1px solid #eee;
+}
+.panel .panel-body .btn{
+	margin-top:20px; 
+}
+
+/*商品清单*/
+.footer-body .table{
+	width: 100%;
+	margin:10px 0;
+}
+.footer-body .orderDetail{
+	background: #eee;
+	padding: 5px 0;
+}
+.footer-body .tableTop{
+	background: #eee;
+}
+
+.footer-body .orderDetail .detailItem{
+	margin:0 10px; 
+}
+.footer-body .orderDetail .orderPayment{
+	color: #FF4200;
+	font-weight: bold;
+}
+.footer-body .orderDetail .orderPort{
+	float: right;
+}
+.footer-body .table td{
+	border-bottom: 1px solid #eee;
+}
+.footer-body .table .productName{
+	width: 40%;
+	text-align:left;
+}
+.footer-body .table .productCount{
+	width: 20%;
+	text-align:center;
+}
+.footer-body .table .productImg{
+	padding: 10px 30px;
+	width: 10%;
+}
+.footer-body .table .productImg img{
+	width: 80px;
+	height: 80px;
+}
+.footer-body .table .productPrice{
+	width: 20%;
+	text-align:center;
+}
