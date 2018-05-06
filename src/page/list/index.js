@@ -3,7 +3,7 @@
 * @Date:   2018-02-09 18:31:37
 * @Last Modified by:   cewei
 <<<<<<< HEAD
-* @Last Modified time: 2018-03-17 13:32:58
+* @Last Modified time: 2018-04-16 15:07:03
 =======
 * @Last Modified time: 2018-03-13 22:57:13
 >>>>>>> 51bdda08f732121b80a1ce865ef378be06f76310
@@ -89,21 +89,21 @@ var page = {
             });
             pListCon.innerHTML = listHtml;
             _this.loadPagination({
-<<<<<<< HEAD
+
                 hasPreviousPage : res.data.hasPreviousPage,
                 prePage         : res.data.prePage,
                 hasNextPage     : res.data.hasNextPage,
                 nextPage        : res.data.nextPage,
                 pageNum         : res.data.pageNum,
                 pages           : res.data.pages
-=======
+
                 // hasPreviousPage : res.data.hasPreviousPage,
                 // prePage         : res.data.prePage,
                 // hasNextPage     : res.data.hasNextPage,
                 // nextPage        : res.data.nextPage,
                 // pageNum         : res.data.pageNum,
                 // pages           : res.data.pages
->>>>>>> 51bdda08f732121b80a1ce865ef378be06f76310
+
             });
         }, function(errMsg){
             _xs.errorTips(errMsg);

@@ -34,21 +34,12 @@ const config = {
         'order-list'        :['./src/page/order-list/index.js'],
         'order-detail'      :['./src/page/order-detail/index.js'],
         'payment'           :['./src/page/payment/index.js'],
-<<<<<<< HEAD
         'about'             :['./src/page/about/index.js']
     },
     output : {
         path       : __dirname + '/dist/',
-        // publicPath : WEBPACK_ENV === 'dev' ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',
-        publicPath : '/dist/',
-=======
-
-
-    },
-    output : {
-        path       : __dirname + '/dist/',
-        publicPath :'/dist/',
->>>>>>> 51bdda08f732121b80a1ce865ef378be06f76310
+        publicPath : '//s.dongcewei.com/XShop-fe/dist/',
+        // publicPath : '/dist/',
         filename   : 'js/[name].js'
     },
     module: {
@@ -82,12 +73,7 @@ const config = {
         getHtmlPlugin('order-list',"我的订单"),
         getHtmlPlugin('order-detail',"订单详情"),
         getHtmlPlugin('payment',"订单支付"),
-<<<<<<< HEAD
         getHtmlPlugin('about',"关于我们")
-=======
-
-
->>>>>>> 51bdda08f732121b80a1ce865ef378be06f76310
     ],
     resolve : {
         alias : {
