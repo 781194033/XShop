@@ -2,7 +2,7 @@
 * @Author: cewei
 * @Date:   2018-02-04 18:50:43
 * @Last Modified by:   cewei
-* @Last Modified time: 2018-02-09 16:58:16
+* @Last Modified time: 2018-06-05 20:33:12
 */
 /* keywords-list */
 .keywords-list{
@@ -87,4 +87,12 @@
     width: 80%;
     height: 75%;
     border: none;
+}
+
+/*banner*/
+#box{
+    position:relative;
+    width: 830px;
+    height: 370px;
+    overflow: hidden;
 }

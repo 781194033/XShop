@@ -2,7 +2,7 @@
 * @Author: cewei
 * @Date:   2018-02-05 17:24:17
 * @Last Modified by:   cewei
-* @Last Modified time: 2018-02-06 13:22:59
+* @Last Modified time: 2018-06-05 20:38:38
 */
 
 
@@ -33,7 +33,6 @@ input[type="checkbox"]{
 	position: relative;
 	width : 1080px;
 	margin: 0 auto;
-	overflow: hidden;
 }
 /* 全局通用样式 */
 /* 隐藏类 */
