@@ -38,8 +38,8 @@ const config = {
     },
     output: {
         path: __dirname + '/dist/',
-        // publicPath: '//s.dongcewei.com/XShop/dist/',
-        publicPath: '/dist/',
+        publicPath: '//s.dongcewei.com/XShop/dist/',
+        // publicPath: '/dist/',
         filename: 'js/[name].js'
     },
     module: {
