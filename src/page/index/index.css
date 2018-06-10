@@ -2,7 +2,7 @@
 * @Author: cewei
 * @Date:   2018-02-04 18:50:43
 * @Last Modified by:   cewei
-* @Last Modified time: 2018-06-05 20:33:12
+* @Last Modified time: 2018-06-11 00:39:05
 */
 /* keywords-list */
 .keywords-list{
@@ -90,7 +90,7 @@
 }
 
 /*banner*/
-#box{
+.banner-wrapper{
     position:relative;
     width: 830px;
     height: 370px;
