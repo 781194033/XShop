@@ -4,6 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WEBPACK_ENV = process.env.WEBPACK_ENV;
 
 function getHtmlPlugin(name, title) {
+
+
     return (new HtmlWebpackPlugin({
         template: './src/view/' + name + '.html',
         filename: 'view/' + name + '.html',
@@ -104,12 +106,8 @@ const config = {
     },
     optimization:{
         splitChunks:{
-            cacheGroups:{
-                common:{
-                    minSize:0,
-                    minChunks:2,
-                    chunks:'initial'
-                }
+            chunks:function(chunk){
+                return chunk.name === 'common';
             }
         }
     },
