@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WEBPACK_ENV = process.env.WEBPACK_ENV;
 
@@ -17,6 +17,7 @@ function getHtmlPlugin(name, title) {
 
 
 const config = {
+    mode:WEBPACK_ENV ? 'production' : 'development',
     entry: {
         'index': ['./src/page/index/index.js'],
         'common': ['./src/page/common/index.js'],
@@ -38,32 +39,41 @@ const config = {
     },
     output: {
         path: __dirname + '/dist/',
-        publicPath: '//s.dongcewei.com/XShop/dist/',
+        publicPath: WEBPACK_ENV ? '//s.dongcewei.com/XShop/dist/':'/dist/',
         // publicPath: '/dist/',
         filename: 'js/[name].js'
     },
     module: {
-        loaders: [{
+        rules:[
+            {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-            }, {
+                use : [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader'
+                ]
+            },
+            {
                 test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,
-                loader: 'url-loader?limit=100&name=resource/[name].[ext]'
-            }, //处理字体和图片
+                use: [
+                    {
+                        loader : 'url-loader',
+                        options:{
+                            limit:100,
+                            name:'resource/[name].[ext]'
+                        }
+                    }
+                ]
+            },
             {
                 test: /\.string$/,
-                loader: "html-loader"
-            },
+                use: ["html-loader"]
+            }
         ]
     },
     plugins: [
-        // 独立通用模块到js/base.js
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'common',
-            filename: 'js/base.js'
+        new MiniCssExtractPlugin({
+            filename:'css/[name].css'
         }),
-        //把css单独打包到文件里
-        new ExtractTextPlugin("css/[name].css"),
         //单独打包html
         getHtmlPlugin('index', "首页"),
         getHtmlPlugin('user-login', "用户登录"),
@@ -91,11 +101,30 @@ const config = {
             util: __dirname + '/src/util',
             view: __dirname + '/src/view'
         }
+    },
+    optimization:{
+        splitChunks:{
+            cacheGroups:{
+                common:{
+                    minSize:0,
+                    minChunks:2,
+                    chunks:'initial'
+                }
+            }
+        }
+    },
+    devServer:{
+        port:'8000',
+        disableHostCheck: true,
+        host:"0.0.0.0",
+        proxy:{
+            '**':{
+                target:'http://www.dongcewei.com',
+                changeOrigin:true 
+            }
+           
+        }
     }
-}
-//dev 开发环境  online 线上环境
-if (WEBPACK_ENV === 'dev') {
-    config.entry.common.push('webpack-dev-server/client?http://localhost:8090/')
 }
 
 module.exports = config;
