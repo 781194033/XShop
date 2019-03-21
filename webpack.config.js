@@ -39,7 +39,7 @@ const config = {
     },
     output: {
         path: __dirname + '/dist/',
-        publicPath: WEBPACK_ENV ? '//s.dongcewei.com/XShop/dist/':'/dist/',
+        publicPath: WEBPACK_ENV ? '//s.dongcewei.com/XShop/':'/dist/',
         // publicPath: '/dist/',
         filename: 'js/[name].js'
     },
